@@ -4,7 +4,7 @@ import { Link } from 'react-scroll';
 
 function NavLinks() {
     return (
-    <ul>
+    <ul className="menu-items">
         <li><NavLink to='/work'>Work</NavLink></li>
         <li><NavLink to='/about'>About</NavLink></li>
         <li>

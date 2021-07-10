@@ -19,6 +19,7 @@ header {
     }
 
     .nav-bar {
+        position: relative;
 
         a {
             text-decoration: none;
@@ -37,33 +38,34 @@ header {
         }
 
         .mobile-navigation {
+            @include flex-column;
+            list-style: none;
             font-size: 1.2rem;
-            position: relative;
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 360px;
+            background-color: #fff;
+            height: 100vh;
+            z-index: 90;
+            transition: 850ms;
 
-            .menuicon, .closeicon {
-                font-size: 1.8rem;
-                color: $text;
-                text-align: left;
-                position: absolute;
-                top: -3rem;
-                left: 1.5rem;
-                z-index: 100;
-                cursor: pointer;
-            }
+        }
 
-            ul {
-                list-style: none;
-                position: absolute;
-                top: -70px;
-                left: 0;
-                right: 0;
-                background-color: #fff;
-                height: 100vh;
-                z-index: 90;
-                @include flex-column;
+        .mobile-navigation.active {
+            left: 0;
+            transition: 350ms;
+        }
 
-            }
-
+        .menuicon, .closeicon {
+            font-size: 1.8rem;
+            color: $text;
+            text-align: left;
+            position: absolute;
+            top: -3.5rem;
+            left: 1.5rem;
+            z-index: 100;
+            cursor: pointer;
         }
 
     }
