@@ -1,0 +1,50 @@
+.work {
+
+    padding: 1rem 1rem 3rem;
+    line-height: $line-height;
+
+    .project-container {
+
+        //position: relative;
+        //overflow: hidden;
+        //max-height: 500px;
+        margin: 2rem auto;
+        border-radius: 20px;
+        //box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        //width: 90%;
+        padding: .5rem;
+
+       .project-info {
+           @include flex-layout-row;
+           padding: .75rem .5rem;
+       }
+
+       .project-link {
+           @include btn-styling;
+           text-align: center;
+           width: 120px;
+           margin: 0;
+
+           p {
+               color: #fff;
+               font-weight: 700;
+           }
+       }
+   
+
+    }
+
+    @media screen and (min-width: $breakpoint-tablet) {
+
+        width: 75%;
+        margin: 3rem 0 0 auto;
+        padding: 1rem 6.5rem 1rem;
+
+        .project-container {
+            width: 90%;
+        }
+    }
+}
+
+
+  

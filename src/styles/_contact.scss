@@ -1,0 +1,48 @@
+#contact {
+
+    padding: 3rem 1.5rem 2.5rem;
+    margin: 8rem 0 2rem;
+    text-align: center;
+    background-color: #F9F6F3;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 15px;
+
+    h1 {
+        letter-spacing: 2px;
+    }
+
+    p {
+        padding: 1rem 0;
+        width: 80%;
+        margin: auto;
+        line-height: 1.5;
+    }
+
+    .contact-social-links {
+
+        @include flex-column;
+        align-items: center;
+        font-weight: 700;
+
+        a {
+            width: 120px;
+            @include btn-styling;
+        }
+    }
+
+    @media screen and (min-width: $breakpoint-tablet) {
+
+        p {
+            width: 60%;
+        }
+    }
+
+}
+
+.top-icon {
+    font-size: 2.3rem;
+    color: $text;
+    text-align: center;
+    margin-bottom: 5rem;
+    cursor: pointer;
+}

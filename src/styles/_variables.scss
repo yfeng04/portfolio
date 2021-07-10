@@ -1,0 +1,23 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+//font variables
+$body-font: 'Lato', sans-serif;
+$line-height: 1.4;
+$heading-size: 2rem;
+$text-size: 1.5rem;
+
+
+//colors
+$text: #4d4d4d;
+$link: #b3b3b3;
+$iconbg: #EBEBEB;
+$icon: #525252;
+
+//utlity varaibles
+$img-full: 100%;
+
+//media query breakpoints:
+$breakpoint-mobile: 640px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;

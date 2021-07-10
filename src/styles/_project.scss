@@ -1,0 +1,190 @@
+.single-project {
+
+    line-height: 1.6;
+
+    section {
+        padding: 1rem 1.5rem;
+    }
+
+    .banner {
+        padding: 1rem 0;
+    }
+
+    .intro-section {
+
+        h1 {
+            padding: .5rem 0;
+        }
+
+        h2 {
+            margin-top: 1rem;
+        }
+
+        .overview {
+            padding-top: 1.5rem;
+        }
+    }
+
+    .external-links {
+
+        text-align: center;
+
+        a {
+            @include btn-styling;
+            padding: .5rem 2rem;
+
+        }
+    }
+    .accordion-item {
+        margin: 2rem 0;
+        cursor: pointer;
+
+    }
+
+    .accordion-title {
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        padding: 1rem;
+        border-radius: 20px;
+        background-color: #efefef;
+
+        &:hover {
+            background-color: #F8F6F2;
+        }
+
+    }
+    
+    // accordion general styles
+    .accordion-content {
+        p {
+            padding: 0 1.5rem 2rem;
+        }
+
+        h3 {
+            padding: 1rem 1.5rem 1rem;
+        }
+    }
+
+     // planning section
+    .planning p {
+        padding: 1.5rem 1.5rem 3rem;
+    }
+
+    // design section
+    .design {
+
+        h3 {
+            padding: 2rem 1.5rem 1rem;
+        }
+
+        .logo {
+            display: block;
+            width: 40%;
+            margin: 0 auto 2rem;
+        }
+
+        .palette {
+            display: block;
+            width: 60%;
+            margin: 0 auto 2rem;
+        }
+
+        .mockup {
+            display: block;
+            width: 95%;
+            margin: 0 auto 2rem;
+            padding-bottom: 4rem;
+        }
+    }
+
+    // for portfolio design section only
+    .design.portfolio {
+        .logo {
+            width: 20%;
+        }
+
+        .image-container {
+            @include flex-center;
+            flex-direction: row-reverse;
+        }
+
+        .image {
+            width: 20%;
+            margin: 0 2rem;
+        }
+
+        .image-text {
+            text-align: center;
+            padding: 1rem;
+        }
+    }
+
+    // development section
+    // for movie buzz development section only
+        .dev.mdb {
+            p {
+                padding: 1rem 1.5rem 0;
+            }
+        }
+    // for portfolio development section only
+        .dev.portfolio {
+
+            .folder {
+                display: block;
+                width: 30%;
+                margin: 0 auto 2rem;
+            }
+
+            .animation-1 {
+                display: block;
+                width: 70%;
+                margin: 0 auto 2rem;
+            }
+
+            a {
+                color: $text;
+                font-weight: 700;
+            }
+        }
+
+    // refelction section
+        .reflection.capstone p {
+            padding: 1.5rem 1.5rem 3rem;
+        }
+
+        .reflection.mdb p,
+        .reflection.portfolio p {
+            padding: 1rem 1.5rem 0;
+        }
+
+
+
+    // return to work page link
+    .return {
+        margin-right: 1.5rem;
+        display: block;
+        position: relative;
+
+        .return-link {
+            @include link-styling;
+            position: absolute;
+            right: 0;
+            margin: 0;
+        }
+    }
+
+   
+    @media screen and (min-width: $breakpoint-tablet) {
+
+        width: 75%;
+        margin: 4rem 0 0 auto;
+        padding: 1rem 6.5rem 1rem;
+
+        .banner {
+            padding: 1rem 1.5rem;
+        }
+    }
+
+}

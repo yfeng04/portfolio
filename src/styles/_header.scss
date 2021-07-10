@@ -1,0 +1,112 @@
+header {
+
+    a {
+        text-align: center;
+        display: block;
+        margin: 0 auto;
+
+        .logo-image {
+            width: 70px;
+            padding: .5rem;
+            margin-top: .5rem;
+            transition: all .5s ease;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+
+    }
+
+    .nav-bar {
+
+        a {
+            text-decoration: none;
+            color: $link;
+            padding: 3.5rem;
+            text-align: center;
+            font-weight: 700;
+
+            &.active {
+                color: $text;
+            }
+        }
+
+        .navigation {
+            display: none;
+        }
+
+        .mobile-navigation {
+            font-size: 1.2rem;
+            position: relative;
+
+            .menuicon, .closeicon {
+                font-size: 1.8rem;
+                color: $text;
+                text-align: left;
+                position: absolute;
+                top: -3rem;
+                left: 1.5rem;
+                z-index: 100;
+                cursor: pointer;
+            }
+
+            ul {
+                list-style: none;
+                position: absolute;
+                top: -70px;
+                left: 0;
+                right: 0;
+                background-color: #fff;
+                height: 100vh;
+                z-index: 90;
+                @include flex-column;
+
+            }
+
+        }
+
+    }
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        
+        a {
+            text-align: left;
+            padding: .5rem 0 0 .5rem;
+
+            .logo-image {
+                position: fixed;
+                margin-top: 0;
+            }
+        }
+            
+        .nav-bar {
+    
+            .mobile-navigation {
+                display: none;
+            }
+        
+            .navigation {
+                display: block;
+                position: relative;
+                font-size: 1.2rem;
+
+                ul {
+                    position: fixed;
+                    top: 150px;
+                    left: 6%;
+                    right: auto;
+
+                }
+            }
+    
+        }
+    }
+    
+}
+
+
+.contact-link {
+    cursor: pointer;
+}
+

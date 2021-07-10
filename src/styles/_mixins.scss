@@ -1,0 +1,85 @@
+//centering element (wrapper)
+@mixin margin-center{
+    margin: {
+        left: auto;
+        right: auto;
+    }
+}
+
+//mixin for flex layout
+//mixin for creating a flex row of evenly spaced elements
+@mixin flex-layout-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+//centering elements in a flex container
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+//styles for ul
+@mixin ul-base {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+//styles for a 
+@mixin a-base {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: $line-height;
+    color: map-get($colors, body-text);
+    padding: 1rem;
+}
+
+//styles for buttons
+@mixin btn-styling {
+    text-decoration: none;
+    color: #fff;
+    background-color: #f2c4ae;
+    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 20px;
+    margin: 1rem;
+    padding: .5rem 0;
+
+    &:hover, &:focus {
+        background-color: #c1c6e1;
+    }
+
+}
+
+//styles for links
+@mixin link-styling {
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+
+        p{
+            color: $link;
+            padding: 0;
+            margin: 0;
+            display: block;
+
+            &:hover {
+                color: $text;
+            }
+        }
+}
+
+
