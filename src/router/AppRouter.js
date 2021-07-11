@@ -1,5 +1,4 @@
 import { Route, Switch, useLocation } from 'react-router-dom';
-// import { useEffect } from 'react';
 import { AnimatePresence } from "framer-motion";
 import PageHome from '../pages/PageHome';
 import PageAbout from '../pages/PageAbout';
@@ -14,16 +13,12 @@ function AppRouter() {
 
   const location = useLocation();
   
-  // useEffect(() => {
-  //   console.log(location);
-  // }, [location]);
-
   return (
     <>
       <AnimatePresence exitBeforeEnter>
         <Switch location={location} key={location.pathname}>
           <Route path='/' exact><PageHome /></Route>
-          <Route path='/work' exact><PageWork /></Route>
+          <Route path='/work'><PageWork /></Route>
           <Route path='/about'><PageAbout /></Route>
           <Route path='/work-farmtoplate'><PageCapstone /></Route>
           <Route path='/work-movie-buzz'><PageMdb /></Route>
