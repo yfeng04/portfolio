@@ -1,3 +1,4 @@
+// General Styling
 body {
     font-family: $body-font;
     max-width: 2000px;
@@ -25,5 +26,23 @@ body {
 
     a {
         cursor: pointer;
+    }
+}
+
+// Layout
+.page {
+    position: relative;
+    min-height: 100%;
+}
+
+.content-wrapper {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    margin-bottom: 2.5rem;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        position: static;
     }
 }

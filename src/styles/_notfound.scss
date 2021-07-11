@@ -1,0 +1,38 @@
+.page-notfound {
+    height: 100vh;
+    @include flex-column;
+}
+
+.notfound {
+    text-align: center;
+    @include flex-column;
+
+    a {
+        @include btn-styling;
+        width: 160px;
+        padding: .75rem 0;
+        margin: 1rem auto;
+        font-weight: 700;
+    }
+
+    h1 {
+        font-size: 3rem;
+        margin-bottom: 2rem;
+        letter-spacing: 3px;
+    }
+
+    p {
+        margin-bottom: 1rem;
+    }
+
+    .sadface {
+        font-size: 4rem;
+        margin: 2rem;
+        
+        path {
+            stroke: $text;
+        }
+        
+    }
+
+}

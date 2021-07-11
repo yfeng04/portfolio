@@ -21,18 +21,13 @@ function PageWork() {
         
         <Header/>
 
-        <main>
-        
-            <div className="work">
-
-            <Projects/>
-            <Contact />
-
-            </div>
-
-        </main>
-        
-        <Footer/>
+        <div className="content-wrapper">
+            <main className="work">
+                <Projects/>
+                <Contact />
+            </main>
+            <Footer/>
+        </div>
       
         </motion.div>
     )
