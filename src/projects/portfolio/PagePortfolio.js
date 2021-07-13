@@ -6,6 +6,7 @@ import Contact from '../../components/Contact';
 import PortfolioAccordion from './PortfolioAccordion';
 import PortfolioCarousel from './PortfolioCarousel';
 import { motion } from "framer-motion";
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
 function PagePortfolio() {
 
@@ -29,23 +30,30 @@ function PagePortfolio() {
                 <PortfolioCarousel/>
             </section>
             
-            <section className="intro-section">
+            <section className="content intro-section">
                 <h1>Personal Portfolio</h1>
                 <p>React, Sass</p>
                 <p className="overview">A personal portfolio website showcasing a selection of my web development projects. The website is built on React and features a smooth page transition using the animation library Framer Motion. </p>
             </section>
             
-            <section className="external-links">
+            <section className="content external-links">
                 <Link target="_blank" to="/"> Live Site </Link>
                 <a target="_blank" rel="noreferrer" href="https://github.com/yfeng04" >Github</a>
             </section>
 
-            <section className="accordion">
+            <section className="content accordion">
                 <PortfolioAccordion/>
             </section>      
 
-            <section className="return">
-                <Link className="return-link" to="/work"><p>← More Work</p></Link>
+            <section className="content link-container">
+                <Link className="previous link-item" to="/work-movie-buzz">
+                    <FaChevronLeft/>
+                    <p>Previous</p>
+                </Link>
+                <Link className="next link-item" to="/work-farmtoplate">
+                    <p>Next</p>
+                    <FaChevronRight/>
+                </Link>
             </section>
 
             <Contact/>

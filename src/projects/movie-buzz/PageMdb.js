@@ -6,6 +6,7 @@ import Contact from '../../components/Contact';
 import MdbAccordion from './MdbAccordion';
 import MdbCarousel from './MdbCarousel';
 import { motion } from "framer-motion";
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
 function PageMdb() {
 
@@ -28,23 +29,30 @@ function PageMdb() {
                     <MdbCarousel/>
                 </section>
                 
-                <section className="intro-section">
+                <section className="content intro-section">
                     <h1>Movie Buzz</h1>
                     <p>React, Sass</p>
                     <p className="overview">Movie Buzz is a movie database web application which allows users to browse and keep track of their favourite movies. Users are able to browse the movie information by popularity, ratings, currently playing, and upcoming. It utilizes The Movie Database API to dynamically display user ratings, release date, and plot summaries.</p>
                 </section>
                 
-                <section className="external-links">
+                <section className="content external-links">
                     <a target="_blank" rel="noreferrer" href="https://yingyingfeng.com/movie-buzz/"> Live Site </a>
                     <a target="_blank" rel="noreferrer" href="https://github.com/yfeng04" >Github</a>
                 </section>
 
-                <section className="accordion">
+                <section className="content accordion">
                 <MdbAccordion/>
                 </section>      
 
-                <section className="return">
-                    <Link className="return-link" to="/work"><p>← More Work</p></Link>
+                <section className="content link-container">
+                    <Link className="previous link-item" to="/work-farmtoplate">
+                        <FaChevronLeft/>
+                        <p>Previous</p>
+                    </Link>
+                    <Link className="next link-item" to="/work-portfolio">
+                        <p>Next</p>
+                        <FaChevronRight/>
+                    </Link>
                 </section>
         
                 <Contact/>

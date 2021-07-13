@@ -2,9 +2,44 @@
     line-height: $line-height;
     padding: 0 1rem;
 
-    section {
+    .content {
         padding: 1rem 1.5rem;
     }
+
+    // .top-link-container {
+        // display: flex;
+        // align-items: center;
+
+        // .top-link {
+        //     @include link-styling;
+    
+        // }
+    
+        // span {
+        //     display: block;
+        //     width: 0.5rem;
+        //     height: 0.5rem;
+        //     border: solid 2px transparent;
+        //     border-right-color: $link;
+        //     border-bottom-color: $link;
+        //     animation: blink 1.5s infinite;
+        // }
+    
+        // @keyframes blink {
+        //     0% {
+        //         opacity: 0;
+        //         transform: rotate(135deg) translate(0, 0);
+        //     }
+        //     50% {
+        //         opacity: 1;
+        //     }
+        //     100% {
+        //         opacity: 0;
+        //         transform: rotate(135deg) translate(0.4rem, 0.4rem);
+        //     }
+        // }
+    // }
+
 
     .banner {
         padding: 1rem 0;
@@ -26,19 +61,18 @@
     }
 
     .external-links {
-
-        text-align: center;
+        @include flex-center;
 
         a {
+            width: 120px;
             @include btn-styling;
-            padding: .5rem 2rem;
-
+            text-align: center;
         }
     }
+
     .accordion-item {
         margin: 2rem 0;
         cursor: pointer;
-
     }
 
     .accordion-title {
@@ -46,8 +80,8 @@
         align-items: center;
         flex-wrap: nowrap;
         justify-content: space-between;
-        padding: 1rem;
-        border-radius: 20px;
+        padding: 1rem 1.5rem;
+        border-radius: 30px;
         background-color: #efefef;
 
         &:hover {
@@ -161,29 +195,62 @@
 
 
 
-    // return to work page link
-    .return {
+    // bottom links
+    .link-container {
         margin-right: 1.5rem;
-        display: block;
-        position: relative;
+        @include flex-layout-row;
 
-        .return-link {
+        .link-item {
             @include link-styling;
-            position: absolute;
-            right: 0;
+            display: flex;
+            align-items: center;
+            align-content: center;
             margin: 0;
+            
+            svg {
+                fill: $link;
+                font-size: .7rem;
+                margin: 0 .25rem;
+
+            }
+
+            &:hover {
+                fill: $text;
+            }
         }
+
     }
 
    
     @media screen and (min-width: $breakpoint-tablet) {
-        width: 75%;
-        margin: 4rem 0 0 auto;
-        padding: 1rem 6.5rem 1rem;
 
+        width: 75%;
+        margin: 3rem 0 0 auto;
+        padding: 1rem 6.5rem 1rem;
+    
         .banner {
             padding: 1rem 1.5rem;
         }
     }
 
 }
+
+// @media screen and (min-width: $breakpoint-tablet) {
+
+//     .single-project-page {
+//         header .nav-bar .navigation {
+//             display: none;
+//         }
+//     }
+
+//     .single-project {
+//         width: 90%;
+//         margin: 4rem auto 0;
+//         padding: 1rem 6.5rem 1rem;
+
+//         .banner {
+//             padding: 1rem 1.5rem;
+//         }
+//     }
+
+// }

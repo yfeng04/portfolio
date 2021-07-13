@@ -10,6 +10,7 @@ footer {
     }
 
     .social-links {
+        @include flex-center;
 
         svg {
             fill: $text;
