@@ -12,6 +12,8 @@ function PageAbout() {
 		document.title = `About | Yingying Feng`;
 	}, []);
 
+    window.scrollTo(0, 0);
+
     return (
         <motion.div 
             className="page"

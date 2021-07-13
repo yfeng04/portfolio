@@ -14,6 +14,8 @@ function PagePortfolio() {
 		document.title = `Portfolio Website | Yingying Feng`;
 	}, []);
 
+    window.scrollTo(0, 0);
+
     return (
         <motion.div 
         className="page"

@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Contact from '../../components/Contact';
@@ -8,7 +9,12 @@ import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
 function PageCapstone() {
 
+    useEffect(() => {
+		document.title = `Farm to Plate | Yingying Feng`;
+	}, []);
 
+    window.scrollTo(0, 0);
+    
     return (
         <div className="page">
                 

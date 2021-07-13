@@ -14,6 +14,8 @@ function PageMdb() {
 		document.title = `Movie Buzz | Yingying Feng`;
 	}, []);
 
+    window.scrollTo(0, 0);
+
     return (
         <motion.div 
             className="page"
