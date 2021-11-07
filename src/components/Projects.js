@@ -10,8 +10,10 @@ function Projects() {
         <Thumbnail
         link="/work-farmtoplate"
         url= {farmtoplateImage}
+        carousel="<CapstoneCarousel/>"
         title="Farm to Plate"
-        tools="WordPress, Sass, JavaScript"
+        tools="WordPress + WooCommerce, Sass, JavaScript"
+        overview="A multi-page e-commerce website built on the WordPress and WooCommerce."
         />
 
         <Thumbnail
@@ -19,6 +21,7 @@ function Projects() {
         url= {mdbImage}
         title="Movie Buzz"
         tools="React, Sass"
+        overview="A movie database web application designed to provide users with latest movie information."
         />
 
         <Thumbnail
@@ -26,6 +29,7 @@ function Projects() {
         url= {portfolioImage}
         title="Portfolio"
         tools="React, Sass"
+        overview="A personal portfolio website showcasing a selection of my web development projects."
         />
       </div>
     )

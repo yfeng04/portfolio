@@ -2,22 +2,23 @@ header {
 
     background-color: #fff;
     position: fixed;
-    left: 0;
-    right: 0;
+    left: 1.5rem;
+    right: auto;
+    height: 100px;
+    width: 100%;
     display: block;
-    height: 85px;
     z-index: 110;
 
     .logo-image {
         position: fixed;
-        left: 0;
-        right: 0;
+        left: 1.5rem;
+        right: auto;
         width: 70px;
         padding: .5rem;
         margin: .5rem auto 0;
         transition: all .5s ease;
 
-        &:hover {
+        &:hover, &:focus {
             transform: scale(1.1);
         }
     }
@@ -34,7 +35,7 @@ header {
             display: block;
             margin: 0 auto;
 
-            &.active {
+            &.active, &:hover, &:focus {
                 color: $text;
             }
         }
@@ -50,7 +51,7 @@ header {
             font-size: 1.2rem;
             position: fixed;
             top: 0;
-            left: -100%;
+            right: -100%;
             width: 85%;
             max-width: 360px;
             background-color: #fff;
@@ -65,7 +66,7 @@ header {
         }
 
         .mobile-navigation.active {
-            left: 0;
+            right: 0;
             transition: 350ms;
         }
 
@@ -74,7 +75,7 @@ header {
             color: $text;
             position: fixed;
             top: 2rem;
-            left: 1.5rem;
+            right: 1.5rem;
             z-index: 100;
             cursor: pointer;
         }
@@ -83,46 +84,20 @@ header {
 
     @media screen and (min-width: $breakpoint-tablet) {
 
-        background-color: transparent;
+    // height: auto;
+    // position: static;
          
         .logo-image {
-            text-align: left;
-            top: -10px;
-            padding: .5rem 0 0 .5rem;
-            margin: 1.5rem;
+            width: 80px;
+            left: 1.5rem;
+            right: auto;
         }
             
-        .nav-bar {
     
-            .mobile-navigation, 
-            .menuicon, 
-            .closeicon {
-                display: none;
-            }
-        
-            .navigation {
-                display: block;
-                position: relative;
-                font-size: 1.2rem;
 
-                .menu-items {
-                    position: fixed;
-                    top: 150px;
-                    left: 7%;
-                    right: auto;
 
-                }
-            }
-    
-        }
     }
 
-    @media screen and (min-width: $breakpoint-desktop) {
-
-        .nav-bar .navigation .menu-items {
-            left: 10%;
-        }
-    }
     
 }
 

@@ -34,7 +34,6 @@ function PagePortfolio() {
             
             <section className="content intro-section">
                 <h1>Personal Portfolio</h1>
-                <p>React, Sass</p>
                 <p className="overview">A personal portfolio website showcasing a selection of my web development projects. The website is built on React and features a smooth page transition using the animation library Framer Motion. </p>
             </section>
             

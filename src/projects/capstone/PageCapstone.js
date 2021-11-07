@@ -16,7 +16,7 @@ function PageCapstone() {
     window.scrollTo(0, 0);
     
     return (
-        <div className="page">
+        <div className="page single-project-page">
                 
             <Header/>
 
@@ -29,7 +29,6 @@ function PageCapstone() {
                     
                     <section className="content intro-section">
                         <h1>Farm to Plate</h1>
-                        <p>WordPress + WooCommerce, Sass, JavaScript</p>
                         <p className="overview">Farm to Plate is a fictitious business that sells weekly food subscription boxes. In a team of 4, we built a multi-page e-commerce website on the WordPress and WooCommerce. This site features a fully customized theme and includes custom post types, custom fields, taxonomies, and styles.</p>
                     </section>
                     

@@ -41,7 +41,11 @@
         padding: 1.5rem 0 1rem;
 
         svg {
-            fill: $text;
+            fill: #807f7f;
+
+            &:hover {
+                fill: $text;
+            }
         }
 
         a {

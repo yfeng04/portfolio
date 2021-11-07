@@ -1,44 +1,9 @@
 .single-project {
     line-height: $line-height;
-    padding: 0 1rem;
 
     .content {
-        padding: 1rem 1.5rem;
+        padding: 0 1.5rem;
     }
-
-    // .top-link-container {
-        // display: flex;
-        // align-items: center;
-
-        // .top-link {
-        //     @include link-styling;
-    
-        // }
-    
-        // span {
-        //     display: block;
-        //     width: 0.5rem;
-        //     height: 0.5rem;
-        //     border: solid 2px transparent;
-        //     border-right-color: $link;
-        //     border-bottom-color: $link;
-        //     animation: blink 1.5s infinite;
-        // }
-    
-        // @keyframes blink {
-        //     0% {
-        //         opacity: 0;
-        //         transform: rotate(135deg) translate(0, 0);
-        //     }
-        //     50% {
-        //         opacity: 1;
-        //     }
-        //     100% {
-        //         opacity: 0;
-        //         transform: rotate(135deg) translate(0.4rem, 0.4rem);
-        //     }
-        // }
-    // }
 
 
     .banner {
@@ -46,13 +11,14 @@
     }
 
     .intro-section {
+        padding: 0 1.7 5rem;
 
         h1 {
             padding: .5rem 0;
         }
 
         h2 {
-            margin-top: 1rem;
+            margin: 1rem 0;
         }
 
         .overview {
@@ -70,134 +36,56 @@
         }
     }
 
-    .accordion-item {
+    .external-links.prototype {
+        a {
+            width: 250px;
+        }
+    }
+
+    .project-item {
         margin: 2rem 0;
-        cursor: pointer;
-    }
 
-    .accordion-title {
-        display: flex;
-        align-items: center;
-        flex-wrap: nowrap;
-        justify-content: space-between;
-        padding: 1rem 1.5rem;
-        border-radius: 30px;
-        background-color: #efefef;
-
-        &:hover {
-            background-color: #F8F6F2;
+        h2 {
+            margin: 1rem 0;
         }
 
+        h3 {
+            margin: .5rem 0;
+        }
     }
-    
-    // accordion general styles
-    .accordion-content {
+
+    // Development Stack Section
+    .tools {
+        color: $text;
+    }
+
+    // Key Features Section
+    .feature-img {
+        display: block;
+        width: 90%;
+        max-width: 500px;
+        margin: 1rem auto;
+    }
+
+    .gif {
+        padding: 10% 2%;
+        background-color: #F0F0F1;
+
+    }
+
+    // Development Process Section
+    .process {
+        article {
+            margin-bottom: 2rem;
+        }
+
         p {
-            padding: 0 1.5rem 2rem;
-        }
-
-        h3 {
-            padding: 1rem 1.5rem 1rem;
+            margin-bottom: .75rem;
         }
     }
-
-     // planning section
-    .planning p {
-        padding: 1.5rem 1.5rem 3rem;
-    }
-
-    // design section
-    .design {
-
-        h3 {
-            padding: 2rem 1.5rem 1rem;
-        }
-
-        .logo {
-            display: block;
-            width: 40%;
-            margin: 0 auto 2rem;
-        }
-
-        .palette {
-            display: block;
-            width: 60%;
-            margin: 0 auto 2rem;
-        }
-
-        .mockup {
-            display: block;
-            width: 95%;
-            margin: 0 auto 2rem;
-            padding-bottom: 4rem;
-        }
-    }
-
-    // for portfolio design section only
-    .design.portfolio {
-        .logo {
-            width: 20%;
-        }
-
-        .image-container {
-            @include flex-center;
-            flex-direction: row-reverse;
-        }
-
-        .image {
-            width: 20%;
-            margin: 0 2rem;
-        }
-
-        .image-text {
-            text-align: center;
-            padding: 1rem;
-        }
-    }
-
-    // development section
-    // for movie buzz development section only
-        .dev.mdb {
-            p {
-                padding: 1rem 1.5rem 0;
-            }
-        }
-    // for portfolio development section only
-        .dev.portfolio {
-
-            .folder {
-                display: block;
-                width: 30%;
-                margin: 0 auto 2rem;
-            }
-
-            .animation-1 {
-                display: block;
-                width: 70%;
-                margin: 0 auto 2rem;
-            }
-
-            a {
-                color: $text;
-                font-weight: 700;
-            }
-        }
-
-    // refelction section
-        .reflection.capstone p {
-            padding: 1.5rem 1.5rem 3rem;
-        }
-
-        .reflection.mdb p,
-        .reflection.portfolio p {
-            padding: 1rem 1.5rem 0;
-        }
-
-
 
     // bottom links
     .link-container {
-        margin-right: 1.5rem;
         @include flex-layout-row;
 
         .link-item {
@@ -224,33 +112,60 @@
    
     @media screen and (min-width: $breakpoint-tablet) {
 
-        width: 75%;
-        margin: 3rem 0 0 auto;
-        padding: 1rem 6.5rem 1rem;
+        .content {
+            padding: 1rem 1.5rem;
+        }
     
+        .banner {
+            padding: 1rem 1.5rem;
+        }
+
+        .link-container {
+            margin-right: 1.5rem;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-column-gap: 5rem;
+            grid-row-gap: .5rem;
+
+            h2 {
+                grid-column: span 2;
+            }
+
+            p {
+                padding-bottom: .5rem;
+            }
+
+            .text {
+                padding-bottom: 1.8rem;
+            }
+
+
+        }
+
+   
+    }
+
+}
+
+@media screen and (min-width: $breakpoint-tablet) {
+
+    .single-project-page {
+        header .nav-bar .navigation {
+            display: none;
+        }
+    }
+
+    .single-project {
+        width: 90%;
+        margin: 4rem auto 0;
+        padding: 1rem 6.5rem 1rem;
+
         .banner {
             padding: 1rem 1.5rem;
         }
     }
 
 }
-
-// @media screen and (min-width: $breakpoint-tablet) {
-
-//     .single-project-page {
-//         header .nav-bar .navigation {
-//             display: none;
-//         }
-//     }
-
-//     .single-project {
-//         width: 90%;
-//         margin: 4rem auto 0;
-//         padding: 1rem 6.5rem 1rem;
-
-//         .banner {
-//             padding: 1rem 1.5rem;
-//         }
-//     }
-
-// }

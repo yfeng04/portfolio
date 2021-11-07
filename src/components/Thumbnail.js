@@ -1,6 +1,6 @@
 import {Link} from 'react-router-dom';
 
-function Thumbnail({link, url, tools, title}) {
+function Thumbnail({link, url, tools, title, overview}) {
     return (
       
         <div className="project-container">
@@ -11,6 +11,7 @@ function Thumbnail({link, url, tools, title}) {
               <div className="project-details">
                 <h2>{title}</h2>
                 <p>{tools}</p>
+                <p className="overview">{overview}</p>
               </div>
 
               <Link className="project-link" to={link}>

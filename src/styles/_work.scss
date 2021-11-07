@@ -10,6 +10,15 @@
        .project-info {
            @include flex-layout-row;
            padding: .75rem .5rem;
+
+           .project-details {
+               padding-left: .25rem;
+
+               .overview{
+                margin: 1rem 0;
+            }
+           }
+
        }
 
        .project-link {
@@ -27,13 +36,43 @@
     }
 
     @media screen and (min-width: $breakpoint-tablet) {
-        width: 75%;
-        margin: 3rem 0 0 auto;
-        padding: 1rem 6.5rem 1rem;
+        // width: 75%;
+        // margin: 3rem 0 0 auto;
+        // padding: 1rem 6.5rem 1rem;
 
         // .project-container {
         //     width: 90%;
         // }
+
+        // ========== full screen ==============
+        width: 90%;
+        margin: 0 auto;
+
+        .project-container {
+            display: grid;
+            grid-template-columns: 1fr .9fr;
+            width: 90%;
+
+            .project-image {
+                width: 90%;
+                align-self: center;
+                justify-self: center;
+            }
+
+            .project-info {
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: flex-start;
+
+                .project-link {
+                    margin: 1rem 0;
+                }
+
+                .project-details {
+                    padding-left: .5rem;
+                }
+            }
+        }
     }
 }
 

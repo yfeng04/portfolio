@@ -4,7 +4,7 @@ body {
     max-width: 2000px;
     margin: 0 auto;
 
-    h1, h2, h3 {
+    h1, h2, h3, h4 {
         font-weight: 700;
     }
 
@@ -20,7 +20,7 @@ body {
         font-size: 1.1rem;
     }
 
-    h1, h2, h3, p {
+    h1, h2, h3, h4, p {
         color: $text;
     }
 
@@ -42,7 +42,7 @@ body {
     right: 0;
     margin-bottom: 2.5rem;
 
-    @media screen and (min-width: $breakpoint-tablet) {
-        position: static;
-    }
+    // @media screen and (min-width: $breakpoint-tablet) {
+    //     position: static;
+    // }
 }

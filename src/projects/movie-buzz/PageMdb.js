@@ -33,7 +33,6 @@ function PageMdb() {
                 
                 <section className="content intro-section">
                     <h1>Movie Buzz</h1>
-                    <p>React, Sass</p>
                     <p className="overview">Movie Buzz is a movie database web application which allows users to browse and keep track of their favourite movies. Users are able to browse the movie information by popularity, ratings, currently playing, and upcoming. It utilizes The Movie Database API to dynamically display user ratings, release date, and plot summaries.</p>
                 </section>
                 

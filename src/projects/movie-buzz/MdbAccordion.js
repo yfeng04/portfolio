@@ -1,132 +1,76 @@
-import { useState } from 'react';
-import { FaPlus, FaMinus } from 'react-icons/fa';
-import { motion, AnimatePresence } from "framer-motion";
-import logo from "../../images/moviebuzz-logo.png";
-import mockup from '../../images/moviebuzz-mockup.png';
+import mockup from '../../images/mdb-mockup.png';
 
 function MdbAccordion() {
 
-    //const [isActive01, setIsActive01] = useState(false); 
-    const [isActive02, setIsActive02] = useState(false); 
-    const [isActive03, setIsActive03] = useState(false); 
-    const [isActive04, setIsActive04] = useState(false); 
-
-    const variants ={
-        open: { opacity: 1, height: "auto" },
-        collapsed: { opacity: 0, height: 0 }
-      }
-    
-    const transition = {
-        duration: 0.8, ease: [0.04, 0.62, 0.23, 0.98]
-    }
-
     return (
         
-        <div>
-            {/* <div className="accordion-item planning">
-                <div className="accordion-title">
-                    <h2>Research & Planning</h2>
-                    <span onClick={() => setIsActive01(!isActive01)}>
-                        {isActive01 ? <FaMinus/> : <FaPlus/>}
-                    </span>
-                </div>
-
-                <AnimatePresence initial={false}>
-                {isActive01 && 
-                (<motion.div
-                      className = "accordion-content"
-                      key="content"
-                      initial="collapsed"
-                      animate="open"
-                      exit="collapsed"
-                      variants={variants}
-                      transition={transition}
-                    >
-                      <p></p>
-                    </motion.div>)}
-                </AnimatePresence>
-            </div> */}
-
-            <div className="accordion-item design">
-                <div className="accordion-title" onClick={() => setIsActive02(!isActive02)}>
-                    <h2>Design</h2>
-                    <span>{isActive02 ? <FaMinus/> : <FaPlus/>}</span>
-                </div>
+        <>
+            {/* Development Stack */}
+            <section className="project-item">
+                <h2>Development Stack</h2>
+                <ul className="tools">
+                    <li>React</li>
+                    <li>Sass</li>
+                    <li>Adobe XD</li>
+                </ul>
+               
+            </section>
                 
-                <AnimatePresence initial={false}>
-                {isActive02 && 
+            {/* Key Features */}
+            <section className="project-item features">
+                <h2>Key Features</h2>
+                    <article>
+                        <h3>Local Storage & Global Hook</h3>
+                        <p>Users can keep track of their favourite movies by storing them in the browser. This was achieved by using local storage and a third party hook called global hook.</p>
+                    </article>
 
-                (<motion.div 
-                    className="accordion-content"
-                    initial="collapsed"
-                    animate="open"
-                    exit="collapsed"
-                    variants={variants}
-                    transition={transition}>
-                    <h3>Branding</h3>
+                    <article>
+                        <h3>API</h3>
+                        <p>Data was fetched through The Movie Data Base API, which allows dynamic display of current movie information. Users can access the movie data such as movie title, release date and overview. </p>
+                    </article>
+
+                    <article>
+                        <h3>Sort Function</h3>
+                        <p>On the home page, users can browse the movies by popularity, ratings, currently playing, and upcoming. A movie filter allows the users to toggle between popular, top-rated, now playing, upcoming. The different filters will have a different call to the API to get a unique list of movies. Two responsive filter design that fits well with both mobile and desktop mode.</p>
+                    </article>
+
+    
+            </section>
+            
+            {/* Development Process */}
+            <section className="project-item process">
+                <h2>Development Process</h2>
+
+                {/* <article>
+                    <h3>Research & Planning</h3>
+                    <p>In this phase, we discussed about the purpose of the site and target audience of the business, and researched potential competitors’ websites to get inspirations for both design and functionality components. As this is a team project, we also drafted a team collaboration plan for more effective communication across the team.</p>
+                </article> */}
+                
+                <article>
+                    <h3>Design</h3>
                     <p>The design is based on a dark movie theatre, with neon light effects to give the design a bit of a retro touch.</p>
-
-                    <h3>Logo</h3>
-                    <img className="logo" src={logo} alt="Site Logo" />
-
-                    <h3>Typography</h3>
-                    <p>Heading and Navigation: Montserrat <br/>Body: Source Sans Pro</p>
-
-                    <h3>High-Fidelity Mockup</h3>
                     <img className="mockup" src={mockup} alt="High-Fidelity Mockup" />
+                    <div className="content external-links prototype ">
+                        <a target="_blank" rel="noreferrer" href="https://xd.adobe.com/view/e119967d-0e90-4db2-89da-7d10ed09ff1c-b44a/">View Desktop Prototype</a>
+                        <a target="_blank" rel="noreferrer" href="https://xd.adobe.com/view/1c9b5906-5a64-4576-a501-dee09c66b407-49c8/">View Mobile Prototype</a>
+                    </div> 
+
+                </article>
+
+                <article>
+                    <h3>Development</h3>
+                    <p>I started by building a static version of React app, followed by fetching data from the external API (The Movie Database) to dynamically generate the content. After that, I used globalHook and localStorage to store the “favourite movie” data and made it accessible in the favourite page. <br/> When the React part was completed, I moved onto styling by using Sass. I firstly created a few variables and mixins that can be used globally across the site then styled the site page by page.</p>
+                </article>
+ 
+            </section>
+
+            {/* Reflections */}
+            <section className="project-item reflection capstone">
+                <h2>Reflections</h2>
+                 <p>Overall, I'm pretty satisfied with the end result. The final site looks 90% close to the mockup and I'm managed to achieve the basic functionalities for a movie database. This is the first React App that I build on my own. There are quite a few things that can be improved. For example, the released date can be formated better and the movie rating can be displayed in a different way.</p>
                 
-                </motion.div>)}
-
-                </AnimatePresence>
-            </div>
-
-            <div className="accordion-item dev mdb">
-                <div className="accordion-title" onClick={() => setIsActive03(!isActive03)}>
-                    <h2>Development</h2>
-                    <span>{isActive03 ? <FaMinus/> : <FaPlus/>}</span>
-                </div>
-                <AnimatePresence initial={false}>
-                {isActive03 && (
-                <motion.div 
-                    className="accordion-content"
-                    key="content"
-                    initial="collapsed"
-                    animate="open"
-                    exit="collapsed"
-                    variants={variants}
-                    transition={transition}>
-                
-                    <p>I started by building a static version of React app, followed by fetching data from the external API (The Movie Database) to dynamically generate the content. After that, I used globalHook and localStorage to store the “favourite movie” data and made it accessible in the favourite page. </p> 
-                    
-                    <p>When the React part was completed, I moved onto styling by using Sass. I firstly created a few variables and mixins that can be used globally across the site then styled the site page by page.</p>
-                </motion.div>)}
-                </AnimatePresence>
-            </div>
-
-            <div className="accordion-item reflection mdb">
-                <div className="accordion-title" onClick={() => setIsActive04(!isActive04)}>
-                    <h2>Reflections</h2>
-                    <span>{isActive04 ? <FaMinus/> : <FaPlus/>}</span>
-                </div>
-                
-                <AnimatePresence initial={false}>
-                {isActive04 && ( 
-                <motion.div 
-                    className="accordion-content"
-                    key="content"
-                    initial="collapsed"
-                    animate="open"
-                    exit="collapsed"
-                    variants={variants}
-                    transition={transition}>
-                    
-                    <p>Overall, I'm pretty satisfied with the end result. The final site looks 90% close to the mockup and I'm managed to achieve the basic functionalities for a movie database. </p>
-                    <p>This is the first React App that I build on my own. There are quite a few things that can be improved. For example, the released date can be formated better and the movie rating can be displayed in a different way. </p>
-                </motion.div>)}
-                </AnimatePresence>
-            </div>
-        </div>
-
+            </section>
+        </>
        
     )
 }

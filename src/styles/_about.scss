@@ -1,6 +1,14 @@
 .about {
-    padding: 1rem 1rem 3rem;
+    padding: 1rem 1.5rem 3rem;
     line-height: $line-height;
+
+    h2 {
+        margin: .5rem 0;
+    }
+
+    h3 {
+        margin: .35rem 0 0;
+    }
 
     .profile-img {
         display: block;
@@ -9,26 +17,46 @@
     }
 
     .intro {
-        padding: 2rem 1.5rem;
+        padding: 2rem 0;
+
+        h1 {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
 
         p {
             padding: .5rem 0;
         }
     }
 
+    .experience,.education {
+        padding-bottom: 2rem;
+    }
+
+    .year-wrapper {
+        @include flex-layout-row;
+    }
+    
+
     .toolkit {
-        padding: 0 1.5rem;
+        padding: 0;
+        padding-bottom: 2rem;
         display: flex;
         flex-wrap: wrap;
         align-items: flex-start;
-        justify-content: space-around;
+        justify-content: center;
         color: $text;
+
+        .design-tools {
+            width: 40%;
+        }
 
 
         h2 {
             width: 100%;
-            margin-bottom: 2rem;
+            margin: 2rem 0;
             font-size: 1.2rem;
+            text-align: center;
         }
 
 
@@ -46,16 +74,21 @@
 
 
     @media screen and (min-width: $breakpoint-tablet) {
-        width: 75%;
-        margin: 3rem 0 0 auto;
-        padding: 1rem 6.5rem 1rem;
+        // width: 75%;
+        // margin: 3rem 0 0 auto;
+        // padding: 1rem 6.5rem 1rem;
 
-        .toolkit {
-            justify-content: space-around;
-
-            h2 {
-                text-align: center;
-            }
+        // ========== full screen ==============
+        .welcome, .toolkit {
+            width: 60%;
+            margin: 0 auto;
+            padding: 1rem 3rem 3rem;
         }
+        
+
+        .profile-img {
+            width: 30%;
+        }
+
     }
 }

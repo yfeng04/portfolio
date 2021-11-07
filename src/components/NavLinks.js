@@ -11,6 +11,7 @@ function NavLinks() {
             <Link 
                 className="contact-link" 
                 to="contact" 
+                activeClass="active"
                 smooth={true} 
                 duration={1000} >
                 Contact
