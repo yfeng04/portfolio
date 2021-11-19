@@ -48,8 +48,8 @@ function PortfolioAccordion() {
                     <p>As this is a website that showcases my work and personality, I chose to use a pastel colour scheme which gives both a calming and uplifting effect. The whole idea is to create a clean UI with approprite usage of white space to effectively highlight and deliver the messages that I wanted to say.</p>
                     <img className="mockup" src={mockup} alt="High-Fidelity Mockup" />
                     <div className="content external-links prototype ">
-                        <a target="_blank" rel="noreferrer" href="https://xd.adobe.com/view/e119967d-0e90-4db2-89da-7d10ed09ff1c-b44a/">View Desktop Prototype</a>
-                        <a target="_blank" rel="noreferrer" href="https://xd.adobe.com/view/1c9b5906-5a64-4576-a501-dee09c66b407-49c8/">View Mobile Prototype</a>
+                        <a target="_blank" rel="noreferrer" href="https://xd.adobe.com/view/1f98c730-c01d-417a-add4-f8adfc4f7770-4acb/">View Desktop Prototype</a>
+                        <a target="_blank" rel="noreferrer" href="https://xd.adobe.com/view/3ac59d27-120c-4f82-b4be-d5d93db9f8b8-6f96/">View Mobile Prototype</a>
                     </div> 
 
                 </article>

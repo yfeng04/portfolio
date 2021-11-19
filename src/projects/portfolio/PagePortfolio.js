@@ -39,7 +39,7 @@ function PagePortfolio() {
             
             <section className="content external-links">
                 <Link target="_blank" to="/"> Live Site </Link>
-                <a target="_blank" rel="noreferrer" href="https://github.com/yfeng04" >Github</a>
+                <a target="_blank" rel="noreferrer" href="https://github.com/yfeng04/portfolio" >Github</a>
             </section>
 
             <section className="content accordion">

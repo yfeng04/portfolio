@@ -40,7 +40,7 @@ function PageCapstone() {
                     
                     <section className="content external-links">
                         <a target="_blank" rel="noreferrer" href="https://farmtoplate.bcitwebdeveloper.ca/">Live Site</a>
-                        <a target="_blank" rel="noreferrer" href="https://github.com/yfeng04" >Github</a>
+                        <a target="_blank" rel="noreferrer" href="https://github.com/yfeng04/farm-to-plate" >Github</a>
                     </section>
 
 

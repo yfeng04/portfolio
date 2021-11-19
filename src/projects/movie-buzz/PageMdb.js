@@ -38,7 +38,7 @@ function PageMdb() {
                 
                 <section className="content external-links">
                     <a target="_blank" rel="noreferrer" href="https://yingyingfeng.com/movie-buzz/"> Live Site </a>
-                    <a target="_blank" rel="noreferrer" href="https://github.com/yfeng04" >Github</a>
+                    <a target="_blank" rel="noreferrer" href="https://github.com/yfeng04/movie-buzz" >Github</a>
                 </section>
 
                 <section className="content accordion">

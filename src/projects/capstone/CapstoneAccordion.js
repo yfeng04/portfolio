@@ -85,9 +85,9 @@ function CapstoneAccordion() {
                     <h3>Design</h3>
                     <p>We decided that the brand values are health, fresh, organic, environmentally friendly packaging, socially responsible, sustainable, transparent, honest, and local. Therefore, the website design will focus on reflecting a refreshing, positive, and bright vibe.</p>
                     <img className="mockup" src={mockup} alt="High-Fidelity Mockup" />
-                    <div className="content external-links prototype ">
+                    {/* <div className="content external-links prototype ">
                         <a target="_blank" rel="noreferrer" href="#">View Interative Prototype</a>
-                    </div> 
+                    </div>  */}
 
                 </article>
 
