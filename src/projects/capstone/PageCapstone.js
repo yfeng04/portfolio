@@ -6,6 +6,7 @@ import Contact from '../../components/Contact';
 import CapstoneAccordion from './CapstoneAccordion';
 import CapstoneCarousel from './CapstoneCarousel';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import { motion } from "framer-motion";
 
 function PageCapstone() {
 
@@ -16,7 +17,12 @@ function PageCapstone() {
     window.scrollTo(0, 0);
     
     return (
-        <div className="page single-project-page">
+        <motion.div 
+            className="page"
+            initial={{opacity: 0}}
+            animate={{opacity: 1}}
+            exit={{opacity: 0}}
+            transition={{duration: 0.3, ease: 'easeInOut'}}>
                 
             <Header/>
 
@@ -58,7 +64,7 @@ function PageCapstone() {
                 <Footer/>
                 
             </div>
-        </div>
+        </motion.div>
     )
 }
 

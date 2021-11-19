@@ -1,6 +1,10 @@
 .about {
-    padding: 1rem 1.5rem 3rem;
+    padding: 1rem 0 3rem;
     line-height: $line-height;
+
+    .welcome, .toolkit {
+        padding: 0 1.5rem;
+    }
 
     h2 {
         margin: .5rem 0;
@@ -44,11 +48,14 @@
         display: flex;
         flex-wrap: wrap;
         align-items: flex-start;
-        justify-content: center;
+        justify-content: space-between;
+        width: 80%;
+        margin: auto;
+        text-align: center;
         color: $text;
 
-        .design-tools {
-            width: 40%;
+        .design-tools, .dev-tools {
+            padding: 0 1rem;
         }
 
 
@@ -85,6 +92,15 @@
             padding: 1rem 3rem 3rem;
         }
         
+        .toolkit {
+            justify-content: center;
+            width: 80%;
+
+            .design-tools, .dev-tools {
+                padding: 0 4rem;
+            }
+    
+        }
 
         .profile-img {
             width: 30%;

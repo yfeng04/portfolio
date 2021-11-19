@@ -105,9 +105,10 @@ function PageAbout() {
                         <ul>
                             <li>HTML 5</li>
                             <li>CSS 3, Sass</li>
-                            <li>JavaScript, jQuery, React</li>
+                            <li>JavaScript</li>
+                            <li>jQuery, React</li>
                             <li>PHP</li>
-                            <li>WordPress, WooCommerce</li>
+                            <li>WordPress</li>
                             <li>Git, Github</li>
                         </ul>
                     </div>
