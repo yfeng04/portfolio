@@ -10,7 +10,6 @@ function Projects() {
         <Thumbnail
         link="/work-farmtoplate"
         url= {farmtoplateImage}
-        carousel="<CapstoneCarousel/>"
         title="Farm to Plate"
         tools="WordPress + WooCommerce, Sass, JavaScript"
         overview="A multi-page e-commerce website built on the WordPress and WooCommerce."
