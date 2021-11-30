@@ -26,12 +26,17 @@ function MdbAccordion() {
 
                     <article>
                         <h3>API</h3>
-                        <p>Data was fetched through The Movie Data Base API, which allows dynamic display of current movie information. Users can access the movie data such as movie title, release date and overview. </p>
+                        <p>Data was fetched through The Movie Database API, which allows dynamic display of current movie information. Users can access the movie data such as movie title, release date and overview for any single movie selected. </p>
                     </article>
 
                     <article>
                         <h3>Sort Function</h3>
-                        <p>On the home page, users can browse the movies by popularity, ratings, currently playing, and upcoming. A movie filter allows the users to toggle between popular, top-rated, now playing, upcoming. The different filters will have a different call to the API to get a unique list of movies. Two responsive filter design that fits well with both mobile and desktop mode.</p>
+                        <p>On the home page, users can browse the movies by popularity, ratings, currently playing, and upcoming by clicking through the sort navigation.</p>
+                    </article>
+
+                    <article>
+                        <h3>Load More Paginiation</h3>
+                        <p>Each page displays 20 movies by default. Users can click the "load more" button to view more movie data for each sort category.</p>
                     </article>
 
     

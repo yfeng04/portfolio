@@ -6,6 +6,8 @@ import { FaGithub } from 'react-icons/fa';
 import { init } from 'ityped';
 import { useEffect, useRef } from 'react';
 import { motion } from "framer-motion";
+import NavBar from '../components/NavBar';
+import Footer from '../components/Footer';
 
 function PageHome() {
 
@@ -30,19 +32,20 @@ function PageHome() {
             exit={{opacity: 0}}
             transition={{duration: 0.3, ease: 'easeInOut'}}
             >
+            <NavBar/>
+            
+            
             <div className="intro">
                 <h1><span ref={textRef}></span></h1>
                 <p>A front-end web developer based in Vancouver, Canada.</p>
                 
-                <Link to="/work" className="work-link">
-                    View My Work     
-                </Link>
+                <Link to="/work" className="work-link">View My Work</Link>
 
-                <div className="social-links">
-                    <a target="_blank" rel="noreferrer" href="mailto: feng.yingying@hotmail.com"><FaRegEnvelope/></a>
+                {/* <div className="social-links">
+                    <a target="_blank" rel="noreferrer" href="mailto:ffeng0304@hotmail.com"><FaRegEnvelope/></a>
                     <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/yingying-f-4b836898/" ><FaLinkedinIn/></a>
                     <a target="_blank" rel="noreferrer" href="https://github.com/yfeng04" ><FaGithub/></a>
-                </div>
+                </div> */}
             </div>
 
             <motion.img 
@@ -51,6 +54,8 @@ function PageHome() {
             transition={{delay: 1, duration: 0.8, ease: 'easeInOut'}}
             src={homelogo} 
             className="logo-image" alt="Site logo" />
+        
+
         </motion.div>
     )
 }

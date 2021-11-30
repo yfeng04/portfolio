@@ -23,83 +23,77 @@ header {
         }
     }
 
-    .nav-bar {
-        position: relative;
-
-        a {
-            text-decoration: none;
-            color: $link;
-            padding: 3.5rem;
-            text-align: center;
-            font-weight: 700;
-            display: block;
-            margin: 0 auto;
-
-            &.active, &:hover, &:focus {
-                color: $text;
-            }
-        }
-
-        .navigation {
-            display: none;
-        }
-
-        .mobile-navigation {
-            @include flex-column;
-            justify-content: flex-start;
-            list-style: none;
-            font-size: 1.2rem;
-            position: fixed;
-            top: 0;
-            right: -100%;
-            width: 85%;
-            max-width: 360px;
-            background-color: #fff;
-            height: 100vh;
-            z-index: 90;
-            transition: 850ms;
-
-            .menu-items {
-                margin-top: 6.5rem;
-            }
-
-        }
-
-        .mobile-navigation.active {
-            right: 0;
-            transition: 350ms;
-        }
-
-        .menuicon, .closeicon {
-            font-size: 1.8rem;
-            color: $text;
-            position: fixed;
-            top: 2rem;
-            right: 1.5rem;
-            z-index: 100;
-            cursor: pointer;
-        }
-
-    }
 
     @media screen and (min-width: $breakpoint-tablet) {
-
-         
+  
         .logo-image {
             width: 90px;
             right: auto;
-        }
-            
-    
-
+        }     
 
     }
 
-    
+}
+
+.nav-bar {
+    position: relative;
+
+    a {
+        text-decoration: none;
+        color: $link;
+        padding: 3.5rem;
+        text-align: center;
+        font-weight: 700;
+        display: block;
+        margin: 0 auto;
+
+        &.active, &:hover, &:focus {
+            color: $text;
+        }
+    }
+
+    .navigation {
+        display: none;
+    }
+
+    .mobile-navigation {
+        @include flex-column;
+        justify-content: flex-start;
+        list-style: none;
+        font-size: 1.2rem;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 85%;
+        max-width: 360px;
+        background-color: #fff;
+        height: 100vh;
+        z-index: 90;
+        transition: 850ms;
+
+        .menu-items {
+            margin-top: 6.5rem;
+        }
+
+    }
+
+    .mobile-navigation.active {
+        right: 0;
+        transition: 350ms;
+    }
+
+    .menuicon, .closeicon {
+        font-size: 1.8rem;
+        color: $text;
+        position: fixed;
+        top: 2rem;
+        right: 1.5rem;
+        z-index: 100;
+        cursor: pointer;
+    }
+
 }
 
 
-.contact-link {
-    cursor: pointer;
-}
+
 
