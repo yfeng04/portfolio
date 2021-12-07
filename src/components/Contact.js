@@ -10,7 +10,7 @@ function Contact() {
 
                 <div className="contact-social-links">
                     <a target="_blank" rel="noreferrer" href="mailto:feng.yingying@hotmail.com">Email</a>
-                    <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/yingying-f-4b836898/" >LinkedIn</a>
+                    <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/yingyingfeng" >LinkedIn</a>
                     <a target="_blank" rel="noreferrer" href="https://github.com/yfeng04" >Github</a> 
                 </div>
             </div>

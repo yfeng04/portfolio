@@ -7,7 +7,6 @@ import { init } from 'ityped';
 import { useEffect, useRef } from 'react';
 import { motion } from "framer-motion";
 import NavBar from '../components/NavBar';
-import Footer from '../components/Footer';
 
 function PageHome() {
 
@@ -41,11 +40,11 @@ function PageHome() {
                 
                 <Link to="/work" className="work-link">View My Work</Link>
 
-                {/* <div className="social-links">
-                    <a target="_blank" rel="noreferrer" href="mailto:ffeng0304@hotmail.com"><FaRegEnvelope/></a>
-                    <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/yingying-f-4b836898/" ><FaLinkedinIn/></a>
+                <div className="social-links">
+                    <a target="_blank" rel="noreferrer" href="mailto:feng.yingying@hotmail.com"><FaRegEnvelope/></a>
+                    <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/yingyingfeng/" ><FaLinkedinIn/></a>
                     <a target="_blank" rel="noreferrer" href="https://github.com/yfeng04" ><FaGithub/></a>
-                </div> */}
+                </div>
             </div>
 
             <motion.img 

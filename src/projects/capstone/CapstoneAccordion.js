@@ -1,14 +1,12 @@
 import { useEffect } from 'react';
-// import logo from '../../images/farmtoplate-logo.png';
-// import colours from '../../images/farmtoplate-palette.png';
 import mockup from '../../images/ftp-mockup.png';
-// import ImageSlider1 from './ImageSlider1';
 import login from '../../images/login.gif';
 import cpt from '../../images/cpt.png';
 import week from '../../images/weekly-menu.gif';
 import theme from '../../images/custom-theme.gif';
 import woocommerce from '../../images/woocommerce.gif';
 import acf from '../../images/acf.png';
+import wireframe from '../../images/ftp-wireframe.png';
 
 function CapstoneAccordion() {
 
@@ -78,7 +76,8 @@ function CapstoneAccordion() {
 
                 <article>
                     <h3>Research & Planning</h3>
-                    <p>In this phase, we discussed about the purpose of the site and target audience of the business, and researched potential competitors’ websites to get inspirations for both design and functionality components. As this is a team project, we also drafted a team collaboration plan for more effective communication across the team.</p>
+                    <p>In this phase, we discussed about the purpose of the site and target audience of the business, and researched potential competitors’ websites to get inspirations for both design and functionality components. To facilitate with the coding process later on, we developed a content plan to list out the custom post types, taxonomies that would be used, as well as the information architechture and wireframe. As this is a team project, we also drafted a team collaboration plan for more effective communication across the team.</p>
+                    <img className="mockup" src={wireframe} alt="Wireframe" />
                 </article>
                 
                 <article>
@@ -93,7 +92,7 @@ function CapstoneAccordion() {
 
                 <article>
                     <h3>Development</h3>
-                    <p>We started the project by firstly developing a content plan. Next, we entered the content and configured WooCommerce settings in the backend. Once the content was ready, we worked on the PHP files to output the content to the front end. When the functional website is completed, we moved onto styling by using Sass. We followed the high-fidelity mock-up and used a mobile-first approach, where we styled the mobile screen first followed by tablet and desktop screens.</p>
+                    <p>We firstly entered the content and configured the required plugins including WooCommerce settings in the backend. Once the content was ready, we worked on the PHP files to output the content to the front end. When the functional website is completed, we moved onto styling by using Sass. We followed the high-fidelity mock-up and used a mobile-first approach, where we styled the mobile screen first followed by tablet and desktop screens.</p>
                 </article>
  
             </section>

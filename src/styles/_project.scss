@@ -60,18 +60,26 @@
     }
 
     // Key Features Section
-    .feature-img {
-        display: block;
-        width: 90%;
-        max-width: 500px;
-        margin: 1rem auto;
-    }
+    .features {
+        .feature-img {
+            display: block;
+            width: 90%;
+            max-width: 500px;
+            margin: 1rem auto;
+        }
+    
+        .gif {
+            padding: 10% 2%;
+            background-color: #F0F0F1;
+    
+        }
 
-    .gif {
-        padding: 10% 2%;
-        background-color: #F0F0F1;
+        p {
+            margin-bottom: 1rem;
+        }
 
     }
+   
 
     // Development Process Section
     .process {

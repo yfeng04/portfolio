@@ -38,23 +38,27 @@
     }
 
     .social-links {
-        padding: 1.5rem 0 1rem;
-        margin-top: .5rem;
-
-
-        svg {
-            fill: #807f7f;
-
-            &:hover {
-                fill: $text;
-            }
-        }
+        padding: 1.5rem 0;
+        @include flex-center;
 
         a {
-            padding: .35rem .5rem;
+            display: block;
+            width: 32px;
+            height: 32px;
+            padding: .5rem;
             margin: 0 .25rem;
             border-radius: 50%;
             background-color: $iconbg;
+
+            svg {
+                fill: #807f7f;
+                display: block;
+                margin: auto;
+    
+                &:hover {
+                    fill: $text;
+                }
+            }
 
         }
 
@@ -100,8 +104,9 @@
         }
 
         .social-links {
-            padding: 2rem 0 1rem;
+            padding: 1.5rem 0 1rem;
             margin-top: 0;
+            justify-content: flex-start;
         }
 
 
