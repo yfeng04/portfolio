@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Contact from '../../components/Contact';
-import PortfolioAccordion from './PortfolioAccordion';
+import PortfolioContent from './PortfolioContent';
 import PortfolioCarousel from './PortfolioCarousel';
 import { motion } from "framer-motion";
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
@@ -42,8 +42,8 @@ function PagePortfolio() {
                 <a target="_blank" rel="noreferrer" href="https://github.com/yfeng04/portfolio" >Github</a>
             </section>
 
-            <section className="content accordion">
-                <PortfolioAccordion/>
+            <section className="content">
+                <PortfolioContent/>
             </section>      
 
             <section className="content link-container">

@@ -2,7 +2,7 @@ import mockup from '../../images/portfolio-mockup.png';
 import landingimg from '../../images/3dgraphic.png';
 import pageTransition from '../../images/page-transition.gif';
 
-function PortfolioAccordion() {
+function PortfolioContent() {
     return (    
         <>
             {/* Development Stack */}
@@ -10,7 +10,6 @@ function PortfolioAccordion() {
                 <h2>Development Stack</h2>
                 <ul className="tools">
                     <li>React</li>
-                    <li>Framer Motion</li>
                     <li>Sass</li>
                     <li>Adobe XD</li>
                 </ul>
@@ -28,7 +27,7 @@ function PortfolioAccordion() {
 
                     <article>
                         <h3>Landing Page Design</h3>
-                        <p>Graphics with 3D effects were made with Adobe Illustrator to highlight personal portfolio site.</p>
+                        <p>Graphics with 3D effects were made with Adobe Illustrator to use for decoration of landing page.</p>
                         <img className="feature-img" src={landingimg} alt="Landing Page Images" />
                     </article>
     
@@ -40,12 +39,12 @@ function PortfolioAccordion() {
 
                 <article>
                     <h3>Research & Planning</h3>
-                    <p>Before starting on this project, I researched multiple students and professionals portfolio websites in the field of web development and design. For websites that I visited, I noted down some inspirational design and functional elements which can be implemented in my website. As I have built a landing page before using the hard coding approach. I wanted to do something different on this project. I decided to use React for this time. This gives me a chance to get more practice on React and I can easily implement some animation effects by using the existing library.</p>
+                    <p>Before starting on this project, I researched multiple student and professional portfolio websites in the field of web development and design. For websites that I visited, I noted down the inspirational design and functional elements which can be implemented in my website. As I have built a landing page before using the hard coding approach. I wanted to try something different on this project. Therefore, I decided to use React as the platform. This gives me a chance to get more hands-on practice on React as well as to explore more amazing functions.</p>
                 </article>
                 
                 <article>
                     <h3>Design</h3>
-                    <p>As this is a website that showcases my work and personality, I chose to use a pastel colour scheme which gives both a calming and uplifting effect. The whole idea is to create a clean UI with approprite usage of white space to effectively highlight and deliver the messages that I wanted to say.</p>
+                    <p>As this is a website that showcases my work and personality, I choose to use a pastel colour scheme which gives a calming and uplifting effect. The whole idea is to create a clean UI with approprite usage of white space to effectively highlight the messages to users.</p>
                     <img className="mockup" src={mockup} alt="High-Fidelity Mockup" />
                     <div className="content external-links prototype ">
                         <a target="_blank" rel="noreferrer" href="https://xd.adobe.com/view/1f98c730-c01d-417a-add4-f8adfc4f7770-4acb/">View Desktop Prototype</a>
@@ -56,7 +55,7 @@ function PortfolioAccordion() {
 
                 <article>
                     <h3>Development</h3>
-                    <p>Similar to other projects, after design was finalized, I firstly worked on the functional parts of the website then moved onto styling. Since there are similar sections across the site, I used a data-driven approach by creating components that can be reused and feeding in data that has an organized structure. When working with React, I always found it hard to look for the components. Therefore, in this project, I decided to plan out the content and components and created relevant folders before doing any coding. </p>
+                    <p>Similar to other projects, after the design was finalized, I firstly worked on the functional parts of the website then moved onto styling. Since there are similar sections across the site, I used a data-driven approach by creating components that can be reused and feeding in data that has an organized structure. When working with React, I always found it hard to look for the components. Therefore, in this project, I decided to create a thoughtful folder structure before moving onto coding. </p>
                 </article>
  
             </section>
@@ -64,8 +63,7 @@ function PortfolioAccordion() {
             {/* Reflections */}
             <section className="project-item reflection capstone">
                 <h2>Reflections</h2>
-                 <p>This project has been a good learning experience for me. I got to try out a few React libraries and had a lot of fun playing around different functionalities. Overall, I'm satisfied of what I've achieved so far for both functionality and design. When it comes to the final stage of testing, I noticed React applications have limited capabilities for search engine optimization (SEO). I did some research on this topic and found that Next.js is a better solution for SEO. I will continue to polish the site and probably move it to Next.js when the program is finished.</p>
-                
+                 <p>This project has been a good learning experience for me. I had a chance to try out a few third-party libraries and had a lot of fun playing around to achieve various functionalities. Overall, I'm satisfied of what I've achieved so far for both functionality and design. When it comes to the final stage of testing, I noticed React applications have a limited capability for search engine optimization (SEO). I did some research on this topic and found that Next.js is a better solution. I will continue to polish the site and probably move it to Next.js later on.</p>
             </section>
         </>
 
@@ -73,4 +71,4 @@ function PortfolioAccordion() {
     )
 }
 
-export default PortfolioAccordion;
+export default PortfolioContent;

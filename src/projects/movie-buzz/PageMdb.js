@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Contact from '../../components/Contact';
-import MdbAccordion from './MdbAccordion';
+import MdbContent from './MdbContent';
 import MdbCarousel from './MdbCarousel';
 import { motion } from "framer-motion";
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
@@ -41,8 +41,8 @@ function PageMdb() {
                     <a target="_blank" rel="noreferrer" href="https://github.com/yfeng04/movie-buzz" >Github</a>
                 </section>
 
-                <section className="content accordion">
-                <MdbAccordion/>
+                <section className="content">
+                <MdbContent/>
                 </section>      
 
                 <section className="content link-container">

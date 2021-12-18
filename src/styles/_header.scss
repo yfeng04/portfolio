@@ -46,6 +46,7 @@ header {
         font-weight: 700;
         display: block;
         margin: 0 auto;
+        transition: all .4s ease-in-out;
 
         &.active, &:hover, &:focus {
             color: $text;
@@ -60,13 +61,14 @@ header {
         @include flex-column;
         justify-content: flex-start;
         list-style: none;
-        font-size: 1.2rem;
+        font-size: 1.3rem;
+        letter-spacing: 1.2px;
         position: fixed;
         top: 0;
         right: -100%;
         width: 85%;
         max-width: 360px;
-        background-color: #fff;
+        background-color: $lightbg;
         height: 100vh;
         z-index: 90;
         transition: 850ms;
