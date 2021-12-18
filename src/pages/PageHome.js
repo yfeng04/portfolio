@@ -6,7 +6,6 @@ import { FaGithub } from 'react-icons/fa';
 import { init } from 'ityped';
 import { useEffect, useRef } from 'react';
 import { motion } from "framer-motion";
-import NavBar from '../components/NavBar';
 
 function PageHome() {
 
@@ -31,14 +30,15 @@ function PageHome() {
             exit={{opacity: 0}}
             transition={{duration: 0.3, ease: 'easeInOut'}}
             >
-            <NavBar/>
-            
             
             <div className="intro">
                 <h1><span ref={textRef}></span></h1>
-                <p>A front-end web developer based in Vancouver, Canada.</p>
-                
-                <Link to="/work" className="work-link">View My Work</Link>
+                <p>Front-End Web Developer & Designer</p>
+
+                <div className='page-links'>
+                    <Link to="/work" className="work-link">Work</Link>
+                    <Link to="/about" className="work-link">About</Link>
+                </div>
 
                 <div className="social-links">
                     <a target="_blank" rel="noreferrer" href="mailto:feng.yingying@hotmail.com"><FaRegEnvelope/></a>

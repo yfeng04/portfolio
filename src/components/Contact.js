@@ -6,7 +6,7 @@ function Contact() {
         <>
             <div className="contact" id="contact">
                 <h1>Let's Connect</h1>
-                <p>If you are interesed in collaborating on a project or if you have any questions, please feel free to contact me.</p>
+                <p>If you have questions about my work or would like to collabrate with me, feel free to leave me a message :)</p>
 
                 <div className="contact-social-links">
                     <a target="_blank" rel="noreferrer" href="mailto:feng.yingying@hotmail.com">Email</a>

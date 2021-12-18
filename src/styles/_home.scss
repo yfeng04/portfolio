@@ -12,7 +12,7 @@
     }
 
     .intro {
-        width: 70%;
+        width: 90%;
         margin: 0 auto;
         text-align: center;
         line-height: 1.6;
@@ -24,21 +24,35 @@
         }
 
         p {
-            padding: .5rem 0 3rem;
-
+            padding: .5rem 0 2rem;
         }
     }
 
-    .work-link {
-        @include btn-styling;
-        padding: .5rem 1rem;
-        margin: 0 0 1rem;
-        font-weight: 700;
-       
+    .page-links {
+        @include flex-center;
+        column-gap: .5rem;
+
+        .work-link {
+            text-align: center;
+            display: block;
+            width: 90px;
+            text-decoration: none;
+            font-weight: 700;
+            color: #fff;
+            background: #f2c4ae;
+            box-shadow: 0 2px 8px 0 rgba(0,0,0,0.2);
+            border-radius: 20px;
+            padding: .3rem 0;
+            transition: all .4s ease-in-out;
+
+            &:hover {
+                background: #c1c6e1;
+            }
+        }
     }
 
     .social-links {
-        padding: 1.5rem 0;
+        padding: 1.5rem 0 1rem;
         @include flex-center;
 
         a {
@@ -54,6 +68,7 @@
                 fill: #807f7f;
                 display: block;
                 margin: auto;
+                transition: all .3s ease-in-out;
     
                 &:hover {
                     fill: $text;
@@ -84,15 +99,20 @@
         flex-direction: row-reverse;
         align-items: center;
         justify-content: center;
+        column-gap: 1rem;
 
         .intro{
-            width: 45%;
+            width: 40%;
             align-items: center;
             margin: 0 0 0 12%;
             text-align: left;
         
             h1 {
-                font-size: 2rem;
+                font-size: 2.2rem;
+            }
+
+            p {
+                font-size: 1.1rem;
             }
 
         }
@@ -103,8 +123,12 @@
             margin: 0 6% 0 0;
         }
 
+        .page-links {
+            justify-content: flex-start;
+        }
+
         .social-links {
-            padding: 1.5rem 0 1rem;
+            padding: 1.5rem 0;
             margin-top: 0;
             justify-content: flex-start;
         }

@@ -26,6 +26,7 @@
         h1 {
             text-align: center;
             margin-bottom: 1rem;
+            letter-spacing: 2.5px;
         }
 
         p {
@@ -33,39 +34,29 @@
         }
     }
 
-    .experience,.education {
-        padding-bottom: 2rem;
-    }
-
-    .year-wrapper {
-        @include flex-layout-row;
-    }
-    
-
     .toolkit {
         padding: 0;
         padding-bottom: 2rem;
         display: flex;
         flex-wrap: wrap;
         align-items: flex-start;
-        justify-content: space-between;
-        width: 80%;
+        justify-content: center;
+        column-gap: 3rem;
         margin: auto;
-        text-align: center;
+        text-align: left;
         color: $text;
 
         .design-tools, .dev-tools {
             padding: 0 1rem;
         }
 
-
         h2 {
             width: 100%;
             margin: 2rem 0;
             font-size: 1.2rem;
             text-align: center;
+            letter-spacing: 2px;
         }
-
 
         h3 {
             font-weight: 700;
@@ -77,27 +68,33 @@
             padding-left: .5rem;
             font-weight: 300;
         }
+
+        .design-tools li:last-child {
+            margin-top: .5rem;
+        }
     }
 
 
     @media screen and (min-width: $breakpoint-tablet) {
-        // width: 75%;
-        // margin: 3rem 0 0 auto;
-        // padding: 1rem 6.5rem 1rem;
-
-        // ========== full screen ==============
-        .welcome, .toolkit {
+        width: 90%;
+        margin: 0 auto;
+        
+        .welcome {
             width: 60%;
             margin: 0 auto;
-            padding: 1rem 3rem 3rem;
+            max-width: 700px;
+            padding: 1rem 3rem 1rem;
+        }
+
+        .intro {
+            margin-top: 2rem;
         }
         
         .toolkit {
-            justify-content: center;
-            width: 80%;
-
+            column-gap: 4rem;
+    
             .design-tools, .dev-tools {
-                padding: 0 4rem;
+                padding: 0 2rem;
             }
     
         }

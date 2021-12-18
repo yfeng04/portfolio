@@ -8,7 +8,7 @@ function Footer() {
                 <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/yingyingfeng/" ><FaLinkedinIn/></a>
                 <a target="_blank" rel="noreferrer" href="https://github.com/yfeng04" ><FaGithub/></a>
             </div>
-            <p>&copy; 2021 | Yingying Feng</p>
+            <p>&copy; {new Date().getFullYear()} | Yingying Feng</p>
         </footer>
     )
 }

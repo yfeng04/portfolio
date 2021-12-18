@@ -24,6 +24,7 @@ footer {
                 fill: #807f7f;
                 display: block;
                 margin: auto;
+                transition: all .3s ease-in-out;
     
                 &:hover {
                     fill: $text;
