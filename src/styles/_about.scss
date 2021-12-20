@@ -1,5 +1,5 @@
 .about {
-    padding: 1rem 0 3rem;
+    padding: 0 0 3rem;
     line-height: $line-height;
 
     .welcome, .toolkit {
@@ -14,25 +14,39 @@
         margin: .35rem 0 0;
     }
 
-    .profile-img {
-        display: block;
-        width: 40%;
-        margin: 2.5rem auto 0;
-    }
+    // Welcome section
 
-    .intro {
-        padding: 2rem 0;
-
-        h1 {
-            text-align: center;
-            margin-bottom: 1rem;
-            letter-spacing: 2.5px;
+    .welcome{
+        .profile-img {
+            display: block;
+            width: 50%;
+            margin: 2.5rem auto 0;
+        }
+    
+        .intro {
+            padding: 2rem 0;
+    
+            h1 {
+                text-align: center;
+                margin-bottom: 1rem;
+                letter-spacing: 2.5px;
+            }
+    
+            p {
+                padding: .5rem 0;
+    
+                br {
+                    content: '';
+                    display: block;
+                    margin-bottom: .5rem;
+                }
+            }
         }
 
-        p {
-            padding: .5rem 0;
-        }
     }
+
+
+    // Toolkit section
 
     .toolkit {
         padding: 0;
@@ -64,14 +78,6 @@
             padding-bottom: .5rem;
         }
 
-        .adobe {
-            padding-left: .5rem;
-            font-weight: 300;
-        }
-
-        .design-tools li:last-child {
-            margin-top: .5rem;
-        }
     }
 
 
@@ -84,10 +90,14 @@
             margin: 0 auto;
             max-width: 700px;
             padding: 1rem 3rem 1rem;
-        }
 
-        .intro {
-            margin-top: 2rem;
+            .intro {
+                margin-top: 2rem;
+            }
+
+            .profile-img {
+                width: 40%;
+            }
         }
         
         .toolkit {
@@ -97,10 +107,6 @@
                 padding: 0 2rem;
             }
     
-        }
-
-        .profile-img {
-            width: 30%;
         }
 
     }

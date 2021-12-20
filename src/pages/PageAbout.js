@@ -1,18 +1,34 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Contact from '../components/Contact';
-import profileImg from '../images/profile-img.png';
 import { motion } from "framer-motion";
 
-
 function PageAbout() {
+    
+    window.scrollTo(0, 0);
+
+    const [response, setResponse] = useState('');
 
     useEffect(() => {
 		document.title = `About | Yingying Feng`;
+
+        const fetchContent = async () => {
+            const res = await axios (`https://yingyingfeng.com/portfolio-backend/wp-json/wp/v2/pages/70`);
+            
+            // console.log(res.data.acf);
+            setResponse(res.data.acf);
+           
+        }
+      
+        fetchContent();
+
 	}, []);
 
-    window.scrollTo(0, 0);
+    function createMarkup(content) {
+        return {__html: content};
+      }
 
     return (
         <motion.div 
@@ -27,41 +43,29 @@ function PageAbout() {
         <div className="content-wrapper">
             <main className="about">
                 <section className="welcome">
-                    <img className="profile-img" src={profileImg} alt="Profile"/>
+                    {response && <img className="profile-img" src={response.image} alt="Profile"/>}
                     <article className="intro">
-                        <h1>Hi, I'm Yingying.</h1>
-                        <p>I am a front-end web developer & UI designer based in Metro Vancouver, recently graduated from BCIT.</p>
-                        
-                        <p>I'm quite new to the technology field. Although I started coding not long ago, my skills keep growing fast through continuous learning and exploring. I'm passionate of creating websites with beautiful design and great user experience by writing clean and efficient codes.</p>
-                        
-                        <p>I love design and coding. Front-end web development allows me to create and solve problems with both skills. It is a vast world to be explored and I’m hoping to become part of it. It may seem that most of my past experiences are unrelated but I believe my diverse education and work background can help me understand clients in different fields and manage a variety of situations. </p>
+                        {response && <h1>{response.intro_title}</h1>}
+                        <div dangerouslySetInnerHTML={createMarkup(response.intro_content)} />
                     </article>
-
                 </section>
 
                 <section className="toolkit">
-                    <h2>My Toolkit</h2>
+                    {response && <h2>{response.toolkit_title}</h2>}
                     <div className="design-tools">
                         <h3>Design</h3>
                         <ul>
-                            <li>Adobe</li>
-                            <li className="adobe">XD</li>
-                            <li className="adobe">Illustrator</li>
-                            <li className="adobe">Photoshop</li>
-                            <li>InVision</li>
+                            {response ? response.design_tools.map((item, id) => 
+                            <li key={id}>{item.skill}</li> ) : ''}
                         </ul>
+                        
                     </div>
 
                     <div className="dev-tools">
                         <h3>Development</h3>
-                        <ul>
-                            <li>HTML 5</li>
-                            <li>CSS 3, Sass</li>
-                            <li>JavaScript</li>
-                            <li>jQuery</li>
-                            <li>React</li>
-                            <li>PHP</li>
-                            <li>WordPress</li>
+                         <ul>
+                            {response ? response.dev_tools.map((item, id) => 
+                            <li key={id}>{item.skill}</li> ) : ''}
                         </ul>
                     </div>
                 </section>

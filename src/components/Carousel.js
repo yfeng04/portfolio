@@ -10,29 +10,25 @@ import "swiper/components/effect-fade/effect-fade.min.css"
 // import Swiper core and required modules
 import SwiperCore, { Pagination,Navigation,EffectFade } from 'swiper/core';
 
-//Import Swiper Images
-import portfolio1 from '../../images/portfolio-1.jpg';
-import portfolio2 from '../../images/portfolio-2.jpg';
   
 // install Swiper modules
 SwiperCore.use([Pagination,Navigation,EffectFade]);
 
-export default function PortfolioCarousel() {
+export default function Carousel({project}) {
     
   
   return (
-    <>
      <Swiper 
         slidesPerView={1} 
         spaceBetween={30} 
         loop={true} 
         pagination={{"clickable": true}} 
         navigation={true}
-        effect={'fade'} 
+        effect={'fade'}
+        initialSlide={1} 
         className="mySwiper">
-        <SwiperSlide><img src={portfolio1} alt="Portfolio Thumnail 1" /></SwiperSlide>
-        <SwiperSlide><img src={portfolio2} alt="Portfolio Thumnail 2" /></SwiperSlide>
+          {project && project.acf.media.map((item, id) => 
+          <SwiperSlide key={id}><img src={item.image} alt="thumbnail" /></SwiperSlide>  )}
     </Swiper>
-    </>
   )
 }
