@@ -105,7 +105,7 @@ function PageSingle() {
 
                     {/* Key Features */}
                     <section className="project-item features">
-                        <h2>Key Features</h2>
+                        <h2>Highlights</h2>
                         {displayFeatures(project)}
                     </section>
 

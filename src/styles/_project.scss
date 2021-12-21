@@ -89,7 +89,7 @@
 
             .feature-img {
                 display: block;
-                width: 90%;
+                width: 95%;
                 max-width: 500px;
                 margin: 1rem auto;
             }
@@ -163,6 +163,12 @@
 
             p {
                 min-height: 70px;
+            }
+
+            .featured-item {
+                .feature-img {
+                    width: 100%;
+                }
             }
 
         }
