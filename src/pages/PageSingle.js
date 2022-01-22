@@ -19,7 +19,7 @@ function PageSingle() {
     const fetchProjectDetails = async () => {
         const res = await axios(`https://yingyingfeng.com/portfolio-backend/wp-json/wp/v2/projects/${id}?_embed`);
         
-        // console.log(res.data);
+        console.log(res.data);
     
         setProject(res.data);
        
@@ -89,8 +89,8 @@ function PageSingle() {
                 </section>
                 
                 <section className="content external-links">
-                    <a target="_blank" rel="noreferrer" href={`https://yingyingfeng.com/${project.slug}`}>Live Site</a>
-                    <a target="_blank" rel="noreferrer" href={`https://github.com/yfeng04/${project.slug}`}>Github</a>
+                    {project && project.acf.links.map((item, id) => 
+                    <a key={id} target="_blank" rel="noreferrer" href={item.url}>{item.name}</a> )}
                 </section>
 
                 <section className="content">
