@@ -15,7 +15,7 @@ function PageAbout() {
 		document.title = `About | Yingying Feng`;
 
         const fetchContent = async () => {
-            const res = await axios (`https://yingyingfeng.com/portfolio-backend/wp-json/wp/v2/pages/70`);
+            const res = await axios (`https://yingyingfeng.com/portfolio-backend/wp-json/wp/v2/pages/103`);
             
             // console.log(res.data.acf);
             setResponse(res.data.acf);
