@@ -5,21 +5,35 @@ import Thumbnail from './Thumbnail';
 function Projects() {
 
   const [projectList, setProjectList] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+      const fetchProjects = async () => {
+        // setIsLoading(true);
+        // const res = await axios.get (`https://yingyingfeng.com/portfolio-backend/wp-json/wp/v2/projects?_embed`);
 
-    const fetchProjects = async () => {
-        const res = await axios (`https://yingyingfeng.com/portfolio-backend/wp-json/wp/v2/projects?_embed`);
+        // //.finally(() => setIsLoading(false));
         
-        console.log(res.data);
-    
-        setProjectList(res.data);
+        // setProjectList(res.data);
+        // console.log(res.data);
+        // console.log(isLoading);
+
+        axios.get("https://yingyingfeng.com/portfolio-backend/wp-json/wp/v2/projects?_embed").then(res=> {
+          setProjectList(res.data);
+          setIsLoading(false);
+          console.log(res.data);
+          console.log(isLoading);
+        });
        
       }
   
       fetchProjects();
 
-    }, []);
+    }, [isLoading]);
+
+    if (isLoading) {
+      return <div>Loading...</div>;
+    }
 
     return (
       <div >

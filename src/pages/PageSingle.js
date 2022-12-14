@@ -12,40 +12,35 @@ function PageSingle() {
     window.scrollTo(0, 0);
     
     const [project, setProject] = useState('');
+    const [isLoading, setIsLoading] = useState(true);
     let {id} = useParams();
 
     useEffect(() => {
-
-    const fetchProjectDetails = async () => {
-        const res = await axios(`https://yingyingfeng.com/portfolio-backend/wp-json/wp/v2/projects/${id}?_embed`);
-        
-        console.log(res.data);
-    
-        setProject(res.data);
-       
-      }
-  
+        const fetchProjectDetails = async () => {
+            // const res = await axios(`https://yingyingfeng.com/portfolio-backend/wp-json/wp/v2/projects/${id}?_embed`);
+            
+            // console.log(res.data);
+            // setProject(res.data);
+            axios.get(`https://yingyingfeng.com/portfolio-backend/wp-json/wp/v2/projects/${id}?_embed`).then(res=> {
+                setProject(res.data);
+                setIsLoading(false);
+                console.log(res.data);
+                console.log(isLoading);
+            });
+        }
+         
       fetchProjectDetails();
 
-    }, [ id ]);
+    }, [ id, isLoading ]);
 
-    const displayFeatures = (content) => {
-        if (content) {
-            return content.acf.features.map((item, id) => 
-            <article key={id} className='featured-item'>
-                <h3>{item.title}</h3>
-                <p>{item.content}</p>
-                {item.image ? <img className={`feature-img ${item.image.slice(-3)}`} src={item.image} alt={item.title} /> : '' }
-            </article>  )
-        }
-       
+    if (isLoading) {
+        return <div>Loading...</div>;
     }
 
-    const displayProcess = (content) => {
+    const displayDesign = (content) => {
         if (content) {
-            return content.acf.process.map((item, id) => 
-            <article key={id}>
-                <h3>{item.title}</h3>
+            return content.acf.design.map((item, id) => 
+            <article key={id} className='featured-item'>
                 <p>{item.content}</p>
                 {item.image ? <img src={item.image} alt={item.title} /> : '' }
                 {item.desktop_link || item.mobile_link ?
@@ -54,8 +49,18 @@ function PageSingle() {
                     <a target="_blank" rel="noreferrer" href={item.mobile_link}>View Mobile Prototype</a>
                 </div> : '' }
             </article>  )
-        }
-       
+        } 
+    }
+
+    const displayDevelopment = (content) => {
+        if (content) {
+            return content.acf.development.map((item, id) => 
+            <article key={id}>
+                <h3>{item.title}</h3>
+                <p>{item.content}</p>
+                {item.image ? <img src={item.image} alt={item.title} /> : '' }
+            </article>  )
+        } 
     }
 
 
@@ -94,26 +99,43 @@ function PageSingle() {
                 </section>
 
                 <section className="content">
-                    {/* Development Stack */}
+                    {project.acf.development_stack ?
                     <section className="project-item">
                         <h2>Development Stack</h2>
                         <ul className="tools">
-                            {project && project.acf.development_stack.map((item, id) => 
+                            {project.acf.development_stack.map((item, id) => 
                             <li key={id}>{item.tool}</li>  )}
                         </ul>
-                    </section>
+                    </section> : ''
+                    }
 
-                    {/* Key Features */}
-                    <section className="project-item features">
-                        <h2>Highlights</h2>
-                        {displayFeatures(project)}
-                    </section>
+                    {project.acf.research ?
+                        <section className="project-item process research">
+                            <h2>Research</h2>
+                            {project && <p>{project.acf.research}</p>}
+                        </section> : ''
+                    }
 
-                    <section className="project-item process">
-                        <h2>Process</h2>
-                        {displayProcess(project)}
-                    </section>
-                    
+                    {project.acf.design ?
+                    <section className="project-item process design">
+                        <h2>Design</h2>
+                        {displayDesign(project)}
+                    </section> : ''
+                    }
+
+                    {project.acf.development ?
+                    <section className="project-item process development">
+                        <h2>Development</h2>
+                        {displayDevelopment(project)}
+                    </section> : ''
+                    }
+
+                    {project.acf.reflection &&
+                        <section className="project-item process reflection">
+                            <h2>Reflection</h2>
+                            {project && <p>{project.acf.reflection}</p>}
+                        </section>
+                    } 
                 </section>
 
                 <section className="content link-container">
